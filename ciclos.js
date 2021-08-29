@@ -19,12 +19,17 @@ function euler(quantity){
 function infinite(quantity){
   
   let sum = 4
-        for(let i = 3; i <= quantity; i+=2){
-            sum += (-4 / i)
+  let res = 0;
+  
+        for(let i = 3; i <= quantity; i+=4){
+            res += -(4 / i);
               console.log(i);
         }
-        return sum
-
+  
+        for(let i = 5; i <= quantity; i+=4){
+            sum += (4/i);
+      }
+        return sum + res;
 
 }
   
